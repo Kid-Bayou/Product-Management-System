@@ -103,3 +103,14 @@ margin-bottom: 100px;
 .product-name {
   font-size: 20px;
 }
+
+.add-product-btn {
+  background-color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  height: 100px;
+  width: 160px;
+  border-radius: 10%;
+  font-size: 20px;
+  cursor: pointer;
+}

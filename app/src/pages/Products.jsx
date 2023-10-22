@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -31,6 +32,7 @@ function Products() {
             );
           })}
         </div>
+        <button className="add-product-btn">+ Add Product</button>
       </div>
     </>
   );
