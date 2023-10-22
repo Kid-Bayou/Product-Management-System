@@ -102,6 +102,11 @@ margin-bottom: 100px;
 
 .product-name {
   font-size: 20px;
+  color: black
+}
+
+.product {
+  text-decoration: none;
 }
 
 .add-product-btn {
@@ -113,4 +118,59 @@ margin-bottom: 100px;
   border-radius: 10%;
   font-size: 20px;
   cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~ PRODUCTS ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #494848c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #090909f0;
+  width: 40%;
+  height: 60%;
+}
+
+.modal-header {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.modal-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+.modal-button {
+  cursor: pointer;
+  height: 40px;
+}
+
+.modal-button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

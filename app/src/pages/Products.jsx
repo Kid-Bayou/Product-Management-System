@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import ProductDetails from "./ProductDetails";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const productsCollectionRef = collection(db, "product");
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -26,13 +28,21 @@ function Products() {
         <div className="products-container">
           {products.map((product) => {
             return (
-              <div className="product" key={product.id}>
+              <Link
+                className="product"
+                key={product.id}
+                onClick={() => {
+                  setOpenModal(true);
+                }}
+              >
                 <p className="product-name">{product.name}</p>
-              </div>
+              </Link>
             );
           })}
         </div>
         <button className="add-product-btn">+ Add Product</button>
+
+        {openModal && <ProductDetails closeModal={setOpenModal} />}
       </div>
     </>
   );
