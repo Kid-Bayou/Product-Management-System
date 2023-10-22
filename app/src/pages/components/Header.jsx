@@ -10,7 +10,7 @@ function Header() {
                     <p className="logo-name">Product Management System</p>
                 </Link>
                 <nav className="nav">
-                    <NavLink to="/login" className="nav-text">
+                    <NavLink to="/products" className="nav-text">
                         Products
                     </NavLink>
                 </nav>
