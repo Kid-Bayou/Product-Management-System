@@ -168,7 +168,7 @@ margin-bottom: 100px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px #090909f0;
   width: 40%;
-  height: 60%;
+  height: 70%;
 }
 
 .modal-header {
@@ -194,4 +194,23 @@ margin-bottom: 100px;
   gap: 20px;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~ CREATE PRODUCT ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-input input {
+  height: 30px;
 }

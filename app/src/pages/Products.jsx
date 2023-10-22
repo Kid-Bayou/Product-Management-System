@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import ProductDetails from "./ProductDetails";
+import CreateProduct from "./CreateProduct";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const productsCollectionRef = collection(db, "product");
   const [openModal, setOpenModal] = useState(false);
+  const [openModalz, setOpenModalz] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -33,16 +36,26 @@ function Products() {
                 key={product.id}
                 onClick={() => {
                   setOpenModal(true);
+                  setSelectedProduct(product);
                 }}
+                
               >
                 <p className="product-name">{product.name}</p>
               </Link>
             );
           })}
         </div>
-        <button className="add-product-btn">+ Add Product</button>
+        <button
+          className="add-product-btn"
+          onClick={() => {
+            setOpenModalz(true);
+          }}
+        >
+          + Add Product
+        </button>
 
         {openModal && <ProductDetails closeModal={setOpenModal} />}
+        {openModalz && <CreateProduct closeModal={setOpenModalz} />}
       </div>
     </>
   );
