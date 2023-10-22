@@ -4,13 +4,13 @@ import logo from "../../assets/logo.png"
 function Header() {
     return (
         <>
-            <header className="main-header">
-                <Link className="site-logo" to="/">
+            <header className="header">
+                <Link className="logo-container" to="/">
                     <img src={logo} className="logo" />
                     <p className="logo-name">Product Management System</p>
                 </Link>
                 <nav className="nav">
-                    <NavLink to="/login">
+                    <NavLink to="/login" className="nav-text">
                         Products
                     </NavLink>
                 </nav>
