@@ -2,14 +2,34 @@ import cancel from "../assets/cancel.png";
 import edit from "../assets/edit.png";
 import del from "../assets/delete.png";
 
+import { useState } from "react";
+
+import UpdateProduct from "./UpdateProduct";
+import DeleteProduct from "./DeleteProduct";
+
 function ProductDetails({ closeModal, product }) {
+  const [openUpdateModal, setOpenUpdateModal] = useState(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+
   return (
     <>
       <div className="modal-background">
         <div className="modal-container">
           <div className="modal-button-container">
-            <img src={edit} className="modal-button" />
-            <img src={del} className="modal-button" />
+            <img
+              src={edit}
+              onClick={() => {
+                setOpenUpdateModal(true);
+              }}
+              className="modal-button"
+            />
+            <img
+              src={del}
+              onClick={() => {
+                setOpenDeleteModal(true);
+              }}
+              className="modal-button"
+            />
             <img
               src={cancel}
               onClick={() => closeModal(false)}
@@ -27,6 +47,13 @@ function ProductDetails({ closeModal, product }) {
           </div>
         </div>
       </div>
+
+      {openUpdateModal && (
+        <UpdateProduct closeModal={setOpenUpdateModal} product={product} />
+      )}
+      {openDeleteModal && (
+        <DeleteProduct closeModal={setOpenDeleteModal} product={product} />
+      )}
     </>
   );
 }

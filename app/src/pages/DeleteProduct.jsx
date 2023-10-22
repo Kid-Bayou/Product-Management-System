@@ -1,6 +1,6 @@
 import cancel from "../assets/cancel.png";
 
-function DeleteProducts({ closeModal }) {
+function DeleteProducts({ closeModal, product }) {
   return (
     <>
       <div className="modal-background">

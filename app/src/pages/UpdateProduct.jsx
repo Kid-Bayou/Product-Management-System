@@ -1,6 +1,6 @@
 import cancel from "../assets/cancel.png";
 
-function UpdateProduct({ closeModal }) {
+function UpdateProduct({ closeModal, product }) {
   return (
     <>
       <div className="modal-background">
