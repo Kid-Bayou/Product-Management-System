@@ -9,11 +9,9 @@ function Products() {
   useEffect(() => {
     const getProducts = async () => {
       const data = await getDocs(productsCollectionRef);
-      setProducts(
-        data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      );
-      console.log(data)
-      console.log(products)
+      setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      console.log(data);
+      console.log(products);
     };
 
     getProducts();
@@ -21,18 +19,18 @@ function Products() {
 
   return (
     <>
-      <h1>Products</h1>
+      <div className="products-page">
+        <h1 className="products-header">Products</h1>
 
-      <div>
-        {products.map((product) => {
+        <div className="products-container">
+          {products.map((product) => {
             return (
-                <div key={product.id}>
-                    <h4>Name: {product.name}</h4>
-                    <p>Description: {product.description}</p>
-                    <p>Price: ${product.price}</p>
-                </div>
-            )
-        })}
+              <div className="product" key={product.id}>
+                <p className="product-name">{product.name}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );
