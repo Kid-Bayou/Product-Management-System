@@ -54,7 +54,7 @@ function Products() {
           + Add Product
         </button>
 
-        {openModal && <ProductDetails closeModal={setOpenModal} />}
+        {openModal && <ProductDetails closeModal={setOpenModal} product={selectedProduct} />}
         {openModalz && <CreateProduct closeModal={setOpenModalz} />}
       </div>
     </>
