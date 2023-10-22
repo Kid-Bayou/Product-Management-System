@@ -66,6 +66,27 @@
   color: white;
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~ PRODUCTS ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.home-header {
+font-size: 60px;
+}
+
+.home-img {
+  width: 1200px;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~ PRODUCTS ~~~~~~~~~~~~~~~~~~~~~~~ */
 
