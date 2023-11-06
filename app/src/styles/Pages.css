@@ -192,8 +192,10 @@ margin-bottom: 100px;
 .modal-button-container {
   display: flex;
   gap: 20px;
+  width: 80%;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-bottom: 15px;
 }
 
 
@@ -213,4 +215,34 @@ margin-bottom: 100px;
 
 .create-input input {
   height: 30px;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~ DELETE PRODUCT ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.delete-btn-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.delete-btn {
+  cursor: pointer;
+  width: 90px;
+  height: 45px;
+  border: solid black 2px;
+  font-family: Helvetica;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.delete-btn:hover {
+  border: solid gray 2px;
+  color: gray;
+}
+
+.confirmation-text {
+  font-size: 25px;
 }
